@@ -1,0 +1,40 @@
+<view class='topView'>
+  <view class='inputView'>
+    <input value='{{query}}' bindinput='valueInfo'></input>
+  </view>
+  <button bindtap='btnClick'>查询</button>
+  <view class='query'>
+    <text>{{query}}</text>
+  </view>
+  <view class='phonetic'>
+    <text>[{{phonetic}}]</text>
+  </view>
+
+</view>
+
+<scroll-view scroll-y style='height: 300px'>
+<view class='trViewTop'>
+  <view class='trView'>
+    <text>有道翻译</text>
+  </view>
+  <text class='tr'>{{translation}}</text>
+</view>
+
+<view>
+  <view class='trView'>有道词典</view>
+  <view wx:for="{{explains}}" class='cidian'>
+    <text>{{item}}</text>
+  </view>
+</view>
+
+<view>
+  <view class='trView'>
+      网络释义
+  </view>
+  <view wx:for="{{web}}" wx:for-item="items" class='webView'>
+    <view wx:for="{{items}}">
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>
+</scroll-view>

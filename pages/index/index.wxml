@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class='inputView'>
+  <input placeholder='输入查找内容' bindinput='valueInfo'></input>
+</view>
+<view class='btnView'>
+    <button bindtap='btnClick'>查询</button>
+</view>
